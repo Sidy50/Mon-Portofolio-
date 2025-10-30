@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — {{TON_PRÉNOM_NOM}}</title>
+  <meta name="description" content="Portfolio Data Analyst & Data Engineer" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:linear-gradient(180deg,#071226 0%,var(--bg) 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1000px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .proj{border-radius:10px;padding:12px;background:rgba(255,255,255,0.015);display:flex;flex-direction:column;gap:6px}
+    .proj h3{margin:0;font-size:16px}
+    .small{font-size:13px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#022; font-weight:700;text-decoration:none}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px}
+    nav{display:flex;flex-direction:column;gap:8px}
+    .meta{display:flex;flex-direction:column;gap:6px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:72px;height:72px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" id="avatar">TN</div>
+      <div>
+        <h1 id="name">{{TON_PRÉNOM_NOM}}</h1>
+        <p class="lead" id="role">Data Analyst & Data Engineer — pipelines, analyses & dashboards</p>
+        <p class="small" id="location">Basé en France • ouvert aux opportunités</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <section>
+          <h2>À propos</h2>
+          <p class="small">Je construis des pipelines robustes et j'extrais des insights actionnables à partir de données brutes. J'aime produire des dashboards clairs et automatiser l'ingestion/traitement des données.</p>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Projets clés</h2>
+          <div class="projects">
+            <!-- Remplace les exemples ci‑dessous par tes projets réels. Pour chaque projet, ajoute un README détaillé dans son repo GitHub. -->
+            <article class="proj">
+              <h3>Analyse du churn client — e‑commerce</h3>
+              <div class="small">Python, Pandas, SQL, Scikit‑learn — notebook + dashboard</div>
+              <div class="small">Résumé : segmentation client et modèle de prédiction du churn. Résultat : réduction du churn estimée à 12% sur une action ciblée.</div>
+              <a class="small" href="#" id="link1">Voir le code</a>
+            </article>
+
+            <article class="proj">
+              <h3>Pipeline ETL & monitoring</h3>
+              <div class="small">Airflow, Docker, PostgreSQL, dbt — déploiement local</div>
+              <div class="small">Résumé : pipeline de 3 jobs ingest → transform → load avec alerting et tests automatisés.</div>
+              <a class="small" href="#" id="link2">Voir le code</a>
+            </article>
+
+            <article class="proj">
+              <h3>Dashboard ventes — Power BI</h3>
+              <div class="small">Power BI, DAX — rapport interactif déployé</div>
+              <div class="small">Résumé : KPI ventes, heatmaps, filtres clients & période.</div>
+              <a class="small" href="#" id="link3">Voir le dashboard</a>
+            </article>
+
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2>Blog / Notes</h2>
+          <p class="small">Je partage parfois des tutoriels et des notes techniques (cleaning patterns, optimisation SQL, patterns Airflow).</p>
+          <a class="btn" href="#" id="blog">Voir mes articles</a>
+        </section>
+      </main>
+
+      <aside class="card">
+        <nav>
+          <div class="meta">
+            <strong>Compétences</strong>
+            <div class="skills">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas / NumPy</span>
+              <span class="tag">SQL / PostgreSQL</span>
+              <span class="tag">Airflow</span>
+              <span class="tag">dbt</span>
+              <span class="tag">Power BI / Tableau</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+
+          <div class="meta" style="margin-top:12px">
+            <strong>Contact</strong>
+            <div class="small" id="email">✉️ <a href="mailto:ton.email@example.com" style="color:inherit;text-decoration:underline">ton.email@example.com</a></div>
+            <div class="small" id="linkedin">🔗 <a href="#" style="color:inherit;text-decoration:underline">LinkedIn / profil</a></div>
+          </div>
+
+          <div class="meta" style="margin-top:12px">
+            <strong>Repo utiles</strong>
+            <div class="small"><a href="#" id="repo1">github.com/TONUSER/analyse-client</a></div>
+            <div class="small"><a href="#" id="repo2">github.com/TONUSER/pipeline-etl</a></div>
+          </div>
+
+        </nav>
+      </aside>
+    </div>
+
+    <footer class="small">
+      <div>© <span id="year"></span> {{TON_PRÉNOM_NOM}} — Portfolio Data Analyst & Data Engineer</div>
+    </footer>
+  </div>
+
+  <script>
+    // Script minimal pour personnaliser rapidement (remplace les valeurs ci‑dessous)
+    const data = {
+      name: 'Ton Prénom Nom',
+      initials: 'TN',
+      email: 'ton.email@example.com',
+      linkedin: 'https://www.linkedin.com/in/tonprofil',
+      projects: [
+        {title:'Analyse du churn client — e‑commerce', link:'#'},
+        {title:'Pipeline ETL & monitoring', link:'#'},
+        {title:'Dashboard ventes — Power BI', link:'#'}
+      ],
+      repos: ['https://github.com/TONUSER/analyse-client','https://github.com/TONUSER/pipeline-etl']
+    }
+
+    document.getElementById('name').textContent = data.name
+    document.getElementById('avatar').textContent = data.initials
+    document.getElementById('email').innerHTML = '✉️ <a href="mailto:'+data.email+'" style="color:inherit;text-decoration:underline">'+data.email+'</a>'
+    document.getElementById('linkedin').innerHTML = '🔗 <a href="'+data.linkedin+'" style="color:inherit;text-decoration:underline" target="_blank">LinkedIn</a>'
+    document.getElementById('year').textContent = new Date().getFullYear()
+    // projects links
+    data.projects.forEach((p,i)=>{
+      const el = document.getElementById('link'+(i+1))
+      if(el){el.textContent = 'Voir le projet'; el.href = p.link}
+    })
+    // repos
+    if(data.repos[0]) document.getElementById('repo1').href = data.repos[0]
+    if(data.repos[1]) document.getElementById('repo2').href = data.repos[1]
+  </script>
+</body>
+</html>
